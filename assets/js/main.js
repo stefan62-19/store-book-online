@@ -427,7 +427,7 @@ if(url.indexOf('products.html')!=-1)
 	setLocalStorage("language",niz);
 })
 }
-
+uzimanjeJezika();
 //console.log(languages);
 var languages=getLocalStorage("language");
 console.log(languages);
