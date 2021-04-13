@@ -631,35 +631,37 @@ if(url.indexOf('products.html')!=-1)
 $("#vrati").click(vrati());
 function vrati()
 {
-	var ispis="";
-	var books=getLocalStorage("books");
-	books.forEach(element => {
-		//console.log(element.slika.src);
-		ispis+=`
-		<article class='details' data-id="${element.id}" class="style${element.id}">
-		<span class="image">
-			<img src="${element.slika.src}" alt="${element.slika.alt}" />
-		</span>
-		<a data-id="${element.id}" href="product-details.html" >
-		
+		ajaxZaSve("assets/data/books.json","get",function(books)
+	{
+		var ispis="";
+		books.forEach(element => {
+			//console.log(element.slika.src);
+			ispis+=`
+			<article class='details' data-id="${element.id}" class="style${element.id}">
+			<span class="image">
+				<img src="${element.slika.src}" alt="${element.slika.alt}" />
+			</span>
+			<a data-id="${element.id}" href="product-details.html" >
 			
-		</a>
-		<br>
-		<div id="opis" >
-		<label><p>${obradaZvezda(element.zvezde)}</p></label>
-		<label><p>Categories:&nbsp;${obradaZanra(element.idKategorije)}</p></label>
-		<label><p>Language:&nbsp;${element.language}</p></label>
-		<label><p>Pages:&nbsp;${element.pages}</p></label>
-		<label><p>Date:&nbsp;${element.publicationDate}</p></label>
-		<label><p>Status:&nbsp;${obradaStanja(element.naStanju)}</p></label>
-		<label><p>Delivery:&nbsp;${obradaDostave(element.freeDelivery)}</p></label>
-		<h1 style="font-size:20px;"></h1>
-		<h1 style="color:#f2849e;"><mark style=" text-decoration: line-through; font-size:30px;">${element.staraCena}</mark> &nbsp;${element.novaCena}€</h1>
-		</div>
-	</article>
-		`
-	});
-	$("#produc").html(ispis);
+				
+			</a>
+			<br>
+			<div id="opis" >
+			<label><p>${obradaZvezda(element.zvezde)}</p></label>
+			<label><p>Categories:&nbsp;${obradaZanra(element.idKategorije)}</p></label>
+			<label><p>Language:&nbsp;${element.language}</p></label>
+			<label><p>Pages:&nbsp;${element.pages}</p></label>
+			<label><p>Date:&nbsp;${element.publicationDate}</p></label>
+			<label><p>Status:&nbsp;${obradaStanja(element.naStanju)}</p></label>
+			<label><p>Delivery:&nbsp;${obradaDostave(element.freeDelivery)}</p></label>
+			<h1 style="font-size:20px;"></h1>
+			<h1 style="color:#f2849e;"><mark style=" text-decoration: line-through; font-size:30px;">${element.staraCena}</mark> &nbsp;${element.novaCena}€</h1>
+			</div>
+		</article>
+			`
+		});
+		$("#produc").html(ispis);
+	})
 }
 // dohvatanje autora
 ajaxZaSve("assets/data/authors.json","post",function(result)
