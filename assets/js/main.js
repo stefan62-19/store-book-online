@@ -353,25 +353,25 @@ $("#addtocart").on("click",function()
 //featured books
 function feturedBooks()
 {
-	var books=getLocalStorage("books");
-	var ispis="";
-	for(let i=1;i<=3;i++)
+	ajaxZaSve("assets/data/books.json","post",function(books)
 	{
-		var item = books[Math.floor(Math.random() * books.length)];
-		ispis+=`
-		<article class="style${i}">
-		<span class="image">
-			<img src="${item.slika.src}" alt="${item.slika.alt}" />
-		</span>
-		<a onclick="prebaci(${item.id})" href="product-details.html">
-
-		</a>
-	</article>
-		`
-	}
-	$("#featured").html(ispis);
-	//var item = books[Math.floor(Math.random() * books.length)];
-	//console.log(item);
+		var ispis="";
+		for(let i=1;i<=3;i++)
+		{
+			var item = books[Math.floor(Math.random() * books.length)];
+			ispis+=`
+			<article class="style${i}">
+			<span class="image">
+				<img src="${item.slika.src}" alt="${item.slika.alt}" />
+			</span>
+			<a onclick="prebaci(${item.id})" href="product-details.html">
+	
+			</a>
+		</article>
+			`
+		}
+		$("#featured").html(ispis);
+	})
 }
 feturedBooks();
 //obrada autora
