@@ -1,0 +1,30 @@
+[
+    {
+        "id":0,
+        "name":"-- Choose Payment Method--"
+    },
+    {
+        "id":1,
+        "name":"Credit/Debit"
+    },
+    {
+        "id":2,
+        "name":"Gift Card"
+    },
+    {
+        "id":3,
+        "name":"Cash"
+    },
+    {
+        "id":4,
+        "name":"Visa"
+    },
+    {
+        "id":5,
+        "name":"MasterCard"
+    },
+    {
+        "id":6,
+        "name":"PayPal"
+    }
+]

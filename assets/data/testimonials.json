@@ -1,0 +1,32 @@
+[
+    {
+        "id":1,
+        "autor":"Jim Ron",
+        "tekst":"It’s not a matter of how much the book costs. The thing is, how much does it cost you not to read it."
+    },
+    {
+        "id":2,
+        "autor":"Ivo Andrić",
+        "tekst":"To remain indifferent to a book is to recklessly impoverish your life."
+    },
+    {
+        "id":3,
+        "autor":"Egyptian record",
+        "tekst":"Knjiga je vrednija od svih spomenika ukrašenih slikama, reljefom i duborezom, jer ona sama gradi spomenike u srcu onog ko je čita."
+    },
+    {
+        "id":4,
+        "autor":"William Ellery Channing",
+        "tekst":"Mostly through books we enjoy communicating with superior minds. In the best books, the authors address us, give us their most valuable thoughts and pour their souls into ours. Thank God for the books!"
+    },
+    {
+        "id":5,
+        "autor":"Helen Eksli",
+        "tekst":"Books can be dangerous. At best, you should put a warning: 'It can change your life.'"
+    },
+    {
+        "id":6,
+        "autor":"Jim Bishop",
+        "tekst":"Prema mom iskustvu, knjige imaju moć zaustaviti vreme, vratiti ga u prošlost ili poleteti u budućnost."
+    }
+]

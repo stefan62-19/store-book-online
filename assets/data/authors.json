@@ -1,0 +1,22 @@
+[
+    {
+        "id":1,
+        "ime":"Karin",
+        "prezime":"Slaughter"
+    },
+    {
+        "id":2,
+        "ime":"Agatha",
+        "prezime":"Christie"
+    },
+    {
+        "id":3,
+        "ime":"James",
+        "prezime":"Patterson"
+    },
+    {
+        "id":4,
+        "ime":"Fyodor",
+        "prezime":"Dostoyevsky"
+    }
+]

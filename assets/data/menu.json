@@ -1,0 +1,30 @@
+[
+    {
+        "naziv":"Home",
+        "href":"index.html"
+    },
+    {
+        "naziv":"Products",
+        "href":"products.html"
+    },
+    {
+        "naziv":"Checkout",
+        "href":"checkout.html"
+    },
+    {
+        "naziv":"About Us",
+        "href":"about.html"
+    },
+    {
+        "naziv":"Testimonials",
+        "href":"testimonials.html"
+    },
+    {
+        "naziv":"Terms",
+        "href":"terms.html"
+    },
+    {
+        "naziv":"Contact Us",
+        "href":"contact.html"
+    }
+]
