@@ -411,9 +411,9 @@ ajaxZaSve("assets/data/testimonials.json","post",function(result)
 	});
 	$("#pouke").append(ispis);
 })
-var testimonials=getLocalStorage("testimonials");
-console.log(testimonials);
-var ispis2="";
+ajaxZaSve("assets/data/testimonials.json","get",function(testimonials)
+{
+	var ispis2="";
 for(let i=1;i<=2;i++)
 {
 	var item = testimonials[Math.floor(Math.random() * testimonials.length)];
@@ -426,6 +426,7 @@ for(let i=1;i<=2;i++)
 	`
 }
 $("#testimonials").html(ispis2);
+})
 var url=window.location.href;
 if(url.indexOf('products.html')!=-1)
 {
