@@ -235,34 +235,7 @@ $.ajax({
 		$(".details").click(detail);
 	}
 });
-function uzimanjeJezika()
-{
-	var niz=[];
-	ajaxZaSve("assets/data/books.json","get",function(result)
-	{
 
-
-			result.forEach(element => {
-				if(niz.includes(element.language))
-				{
-					
-				}
-				else
-				{
-					niz.push(element.language);
-				}
-	})
-	console.log(niz);
-	setLocalStorage("language",niz);
-})
-}
-
-//console.log(languages);
-var languages=getLocalStorage("language");
-console.log(languages);
-languages.forEach(element => {
-	$("#ddlLg").append(`<option value="${element}">${element}</option>`)
-});
 
 var categories=[];
 function ajaxZaSve(url, method, result){
@@ -433,6 +406,34 @@ $("#testimonials").html(ispis2);
 var url=window.location.href;
 if(url.indexOf('products.html')!=-1)
 {
+	function uzimanjeJezika()
+{
+	var niz=[];
+	ajaxZaSve("assets/data/books.json","get",function(result)
+	{
+
+
+			result.forEach(element => {
+				if(niz.includes(element.language))
+				{
+					
+				}
+				else
+				{
+					niz.push(element.language);
+				}
+	})
+	console.log(niz);
+	setLocalStorage("language",niz);
+})
+}
+
+//console.log(languages);
+var languages=getLocalStorage("language");
+console.log(languages);
+languages.forEach(element => {
+	$("#ddlLg").append(`<option value="${element}">${element}</option>`)
+});
 	function myFunction() {
 		document.getElementById("myDropdown").classList.toggle("show");
 	  }
