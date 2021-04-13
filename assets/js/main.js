@@ -697,8 +697,8 @@ function setLocalStorage(name,data){
   }
   function obradaZanra(data)
 {
-	var kat=getLocalStorage('cat');
-	//console.log(kat);
+	ajaxZaSve("assets/data/categories.json","get",function(kat)
+	{
 		var ispis="";
 
 		kat.forEach(element2 => {
@@ -711,6 +711,8 @@ function setLocalStorage(name,data){
 		});
 		//vracanjeKat(ispis);
 	return ispis;
+	})
+	
 
 }
 
