@@ -256,14 +256,13 @@ function uzimanjeJezika()
 	setLocalStorage("language",niz);
 })
 }
-//var languages=getLocalStorage("language");
+
 //console.log(languages);
-	ajaxZaSve("assets/data/languages.json","get",function(languages)
-		  {
-		languages.forEach(element => {
+var languages=getLocalStorage("language");
+console.log(languages);
+languages.forEach(element => {
 	$("#ddlLg").append(`<option value="${element}">${element}</option>`)
 });
-	});
 
 var categories=[];
 function ajaxZaSve(url, method, result){
