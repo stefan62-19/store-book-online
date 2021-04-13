@@ -166,7 +166,7 @@ window.onload = () => {
 var linkovi=[];
 $.ajax({
 	url:'assets/data/menu.json',
-	method:"post",
+	method:"get",
 	dataType:'json',
 	success:function(result)
 	{		
@@ -357,7 +357,7 @@ $("#addtocart").on("click",function()
 //featured books
 function feturedBooks()
 {
-	ajaxZaSve("assets/data/books.json","post",function(books)
+	ajaxZaSve("assets/data/books.json","get",function(books)
 	{
 		var ispis="";
 		for(let i=1;i<=3;i++)
@@ -399,7 +399,7 @@ if(url.indexOf('testimonials.html')!=-1)
 
 
 }
-ajaxZaSve("assets/data/testimonials.json","post",function(result)
+ajaxZaSve("assets/data/testimonials.json","get",function(result)
 { 
 	setLocalStorage("testimonials",result);
 	//console.log("dsdsfd");
@@ -668,7 +668,7 @@ function vrati()
 	})
 }
 // dohvatanje autora
-ajaxZaSve("assets/data/authors.json","post",function(result)
+ajaxZaSve("assets/data/authors.json","get",function(result)
 { //console.log(result);
 	setLocalStorage("authors",result);
 });
