@@ -199,7 +199,7 @@ var books=[];
 
 $.ajax({
 	url:'assets/data/books.json',
-	method:"post",
+	method:"get",
 	dataType:'json',
 	success:function(result)
 	{	setLocalStorage("books",result);	
@@ -238,7 +238,7 @@ $.ajax({
 function uzimanjeJezika()
 {
 	var niz=[];
-	ajaxZaSve("assets/data/books.json","post",function(result)
+	ajaxZaSve("assets/data/books.json","get",function(result)
 	{
 
 
@@ -276,7 +276,7 @@ function ajaxZaSve(url, method, result){
     });
 }
 
-ajaxZaSve("assets/data/categories.json","post",function(result)
+ajaxZaSve("assets/data/categories.json","get",function(result)
 {
 	categories.push(result);
 	setLocalStorage("cat",result);
@@ -441,7 +441,7 @@ if(url.indexOf('products.html')!=-1)
 	  function filterFunction() {
 		var naziv=$("#myInput").val();
 		var ispis="";
-		ajaxZaSve("assets/data/books.json","post",function(result)
+		ajaxZaSve("assets/data/books.json","get",function(result)
 		{ 
 			
 			  result.forEach(element => {
@@ -677,7 +677,7 @@ function prebaci(id)
 	//var id=$(this).data("id");
 	console.log(id);
 	var filtrirani;
-	ajaxZaSve("assets/data/books.json","post",function(result)
+	ajaxZaSve("assets/data/books.json","get",function(result)
 	{
 		filtrirani=result.filter(x=>x.id==id);
 		setLocalStorage("bookdetails",filtrirani);
@@ -772,7 +772,7 @@ function detail() {
 	var idKnjige=localStorage.getItem('details');
 	$.ajax({
 		url:'assets/data/books.json',
-		method:"post",
+		method:"get",
 		dataType:'json',
 		success:function(result)
 		{	
@@ -1083,7 +1083,7 @@ if(url.indexOf('checkout.html')!=-1)
 		});
 		$("#country").html(ispis);
 	})
-	ajaxZaSve("assets/data/title.json","post",function(result)
+	ajaxZaSve("assets/data/title.json","get",function(result)
 	{
 		var ispis="";
 		result.forEach(element => {
@@ -1094,7 +1094,7 @@ if(url.indexOf('checkout.html')!=-1)
 		});
 		$("#selTitle").html(ispis);
 	})
-	ajaxZaSve("assets/data/paymentMetod.json","post",function(result)
+	ajaxZaSve("assets/data/paymentMetod.json","get",function(result)
 	{
 		var ispis="";
 		result.forEach(element => {
