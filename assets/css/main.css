@@ -3397,6 +3397,9 @@ input, select, textarea {
 	background-color: #FFC5BE;
 	display: none;
 }
+.hid{
+	display: none;
+}
 #addNumberCart
 {
 	padding-left: 9px;
