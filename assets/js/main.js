@@ -829,7 +829,7 @@ var greske="";
 			$("#hidName").css("display","block");
 			greske+="1";
 		}
-				if(regName.test(name))
+				if(regEmail.test(email))
 		{
 			$("#hidEmail").css("display","none");	
 		}
@@ -838,7 +838,7 @@ var greske="";
 			$("#hidEmail").css("display","block");
 			greske+="2";
 		}
-				if(regName.test(name))
+				if(regTel.test(tel))
 		{
 			$("#hidTel").css("display","none");	
 		}
