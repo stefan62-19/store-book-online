@@ -788,92 +788,77 @@ function detail() {
 }
 
 }
-//regularni izrazi
-// var namee=$("#name").val();
-// var email=$("#email").val();
-// var tel=$("#subject").val();
-// var notes=$("#name").val();
+
+/////////////////////////////////////////////////
+var url=window.location.href;
+if(url.indexOf('index.html')!=-1)
+{
+	//regularni izrazi
+
+	$("#name").on("focus",function()
+	{
+		console.log("ccc")
+		$("#hidName").css("display","none");
+	})
+	$("#email").on("focus",function()
+	{
+		console.log("ccc")
+		$("#hidEmail").css("display","none");
+	})
+	$("#subject").on("focus",function()
+	{
+		console.log("ccc")
+		$("#hidTel").css("display","none");
+	})
+	$(".primary1").on("click",function()
+	{
+		// var namee=$("#name").val();
+var email=$("#email").val();
+var tel=$("#subject").val();
+var name=$("#name").val();
 var regName=/^([A-ZČĆŽŠĐ][a-zčćžšđ]{1,20})+$/;
 var regEmail=/^[^@]+@[^@]+\.[^@\.]+$/;
 var regTel=/^06[0-9]{6,8}$/;
 var greske="";
-
-$("#name").on("focus",function()
-{
-	$("#name").css("background-color","	white")
-})
-$("#name").on("blur",function()
-{
-	var regName=/^([A-ZČĆŽŠĐ][a-zčćžšđ]{1,20})+$/;
-	var namee=$("#name").val();
-	//console.log(namee);
-	if(regName.test(namee))
-	{
-		$("#name").css("background-color","	#90EE90")
-	}
-	else{
-		greske+="1";
-		$("#name").css("background-color","#FFC5BE")
-	}
-})
-$("#email").on("focus",function()
-{
-	$("#email").css("background-color","	white")
-})
-$("#email").on("blur",function()
-{
-	var regEmail=/^[^@]+@[^@]+\.[^@\.]+$/;
-	var email=$("#email").val();
-	//console.log(email);
-	if(regEmail.test(email))
-	{
-		$("#email").css("background-color","	#90EE90")
-	}
-	else{
-		greske+="1";
-		$("#email").css("background-color","#FFC5BE")
-	}
-})
-$("#subject").on("focus",function()
-{
-	$("#subject").css("background-color","	white")
-})
-$("#subject").on("blur",function()
-{
-	var regTel=/^06[0-9]{6,8}$/;
-	var tel=$("#subject").val();
-	//console.log(tel);
-	if(regTel.test(tel))
-	{
-		$("#subject").css("background-color","	#90EE90")
-	}
-	else{
-		greske+="1";
-		$("#subject").css("background-color","#FFC5BE")
-	}
-})
-var url=window.location.href;
-if(url.indexOf('index.html')!=-1)
-{
-	$(".primary").on("click",function()
-	{
-		var nameColor=document.getElementById("name").style.backgroundColor;
-		var emailColor=document.getElementById("email").style.backgroundColor;
-		var subjectColor=document.getElementById("subject").style.backgroundColor;
-		if(document.getElementById("name").style.backgroundColor=='rgb(144, 238, 144)'&&document.getElementById("email").style.backgroundColor=='rgb(144, 238, 144)'&&document.getElementById("subject").style.backgroundColor=='rgb(144, 238, 144)')
+		if(regName.test(name))
+		{
+			$("#hidName").css("display","none");	
+		}
+		else
+		{
+			$("#hidName").css("display","block");
+			greske+="1";
+		}
+				if(regName.test(name))
+		{
+			$("#hidEmail").css("display","none");	
+		}
+		else
+		{
+			$("#hidEmail").css("display","block");
+			greske+="2";
+		}
+				if(regName.test(name))
+		{
+			$("#hidTel").css("display","none");	
+		}
+		else
+		{
+			$("#hidTel").css("display","block");
+			greske+="3";
+		}
+		if(greske!="")
+		{
+			alert("Plese fill field correct");
+		}
+		else
 		{
 			alert("Thenks for message");
 			$("#name").val("");
 			$("#email").val("");
 			$("#subject").val("");
-			$("#name").css("background-color","#f6f6f6")
-			$("#email").css("background-color","#f6f6f6")
-			$("#subject").css("background-color","#f6f6f6")
 		}
-		else
-		{
-			alert("Plese fill field correct");
-		}
+
 	})
 }
 
