@@ -305,7 +305,11 @@ if(url.indexOf('product-details.html')!=-1)
 						<button class="primary">Books</button>
 						</form>
 						</div>
-						
+						<div class="col-sm-6">
+						<form action="checkout.html">
+						<button class="primary">Cart</button>
+						</form>
+						</div>
 					  </div>
 				</div>
 			</div>
