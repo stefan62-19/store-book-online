@@ -3410,7 +3410,7 @@ input, select, textarea {
 @media screen and (max-width: 550px) {
 	.removeFromCart
 	{
-		font-size:7px;
+		font-size:6px !important;
 	}
 }
 @media screen and (max-width: 700px) {
