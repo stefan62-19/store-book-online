@@ -1035,7 +1035,7 @@ if(url.indexOf('checkout.html')!=-1)
 				ispis+=
 				`
 				<tr>
-				<td><img class="imgSize" style="width:20%" src="${element.slika.src}" alt="${element.slika.alt}"/></td>
+				<td><img class="imgSize" style="width:60%" src="${element.slika.src}" alt="${element.slika.alt}"/></td>
 				<td>${element.naslov}</td>
 				<td>${element2.quantity}</td>
 				<td>${element.novaCena} € </td>
