@@ -1227,7 +1227,8 @@ if(url.indexOf('checkout.html')!=-1)
 			$("#Payment").val("0");
 			$("#field-10").val("");
 			$("#checkbox-4").prop("checked", false);
-
+			$("#korpa").html("<h1>Cart is empty</h1><br><form action='products.html'><button style='margin:0px auto;'>Books</button></form>");
+			localStorage.removeItem('cartProducts');
 		}
 	})
 
