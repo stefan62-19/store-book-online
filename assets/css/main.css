@@ -3408,9 +3408,9 @@ input, select, textarea {
 	background-color: #a1e7a3;
 }
 @media screen and (max-width: 550px) {
-	#cartPrint
+	.removeFromCart
 	{
-		flex-direction: column;
+		font-size:7px;
 	}
 }
 @media screen and (max-width: 700px) {
