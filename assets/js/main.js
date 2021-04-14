@@ -545,6 +545,7 @@ languages.forEach(element => {
 	  }
 	  else
 	  {
+		  $("#addNumberCart").html(0);
 		//console.log("dfdgdfgfdgfdsfsdgfdgfdgd");
 	  }
 	  //obrada filtera dogadjaj
