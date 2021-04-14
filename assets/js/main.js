@@ -959,7 +959,9 @@ if(url.indexOf('checkout.html')!=-1)
 	var productsCart=getLocalStorage("cartProducts");
 	var books=getLocalStorage("books")
 	var filtrirani=[];
-	var ispis=`
+	if(getLocalStorage("cartProducts").length)
+	{
+			var ispis=`
 	<tr>
 	<th>Images</th>
 	<th>Title</th>
@@ -1000,6 +1002,12 @@ if(url.indexOf('checkout.html')!=-1)
 	`
 	$("#cartPrint").html(ispis);
 	$(".removeFromCart").click(removeFromCart);
+	}
+	else
+	{
+		$("#korpa").html("<h1>Cart is empty</h1><br><form action='products.html'><button style='margin:0px auto;'>Books</button></form>");
+	}
+
 	function removeFromCart()
 	{
 		var productsCart1;
@@ -1066,14 +1074,7 @@ if(url.indexOf('checkout.html')!=-1)
 			$("#korpa").html("<h1>Cart is empty</h1><br><form action='products.html'><button style='margin:0px auto;float:right'>Books</button></form>");
 		}
 	}
-	if(getLocalStorage("cartProducts").length)
-	{
-		
-	}
-	else
-	{
-		$("#korpa").html("<h1>Cart is empty</h1><br><form action='products.html'><button style='margin:0px auto;'>Books</button></form>");
-	}
+
 	ajaxZaSve("assets/data/country.json","get",function(result)
 	{
 		var ispis="";
