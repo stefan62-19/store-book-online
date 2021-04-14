@@ -256,6 +256,75 @@ ajaxZaSve("assets/data/categories.json","get",function(result)
 
 console.log(categories);
 //console.log(zanrovi);
+	var url=window.location.href;
+if(url.indexOf('contact.html')!=-1)
+{
+	$("#name").on("focus",function()
+	{
+		console.log("ccc")
+		$("#hidName").css("display","none");
+	})
+	$("#email").on("focus",function()
+	{
+		console.log("ccc")
+		$("#hidEmail").css("display","none");
+	})
+	$("#subject").on("focus",function()
+	{
+		console.log("ccc")
+		$("#hidTel").css("display","none");
+	})
+	$(".primary2").on("click",function()
+	{
+		// var namee=$("#name").val();
+var email=$("#email").val();
+var tel=$("#subject").val();
+var name=$("#name").val();
+var regName=/^([A-ZČĆŽŠĐ][a-zčćžšđ]{1,20})+$/;
+var regEmail=/^[^@]+@[^@]+\.[^@\.]+$/;
+var regTel=/^06[0-9]{6,8}$/;
+var greske="";
+		if(regName.test(name))
+		{
+			$("#hidName").css("display","none");	
+		}
+		else
+		{
+			$("#hidName").css("display","block");
+			greske+="1";
+		}
+				if(regEmail.test(email))
+		{
+			$("#hidEmail").css("display","none");	
+		}
+		else
+		{
+			$("#hidEmail").css("display","block");
+			greske+="2";
+		}
+				if(regTel.test(tel))
+		{
+			$("#hidTel").css("display","none");	
+		}
+		else
+		{
+			$("#hidTel").css("display","block");
+			greske+="3";
+		}
+		if(greske!="")
+		{
+			alert("Plese fill field correct");
+		}
+		else
+		{
+			alert("Thenks for message");
+			$("#name").val("");
+			$("#email").val("");
+			$("#subject").val("");
+		}
+
+	})
+}
 var url=window.location.href;
 if(url.indexOf('product-details.html')!=-1)
 {
