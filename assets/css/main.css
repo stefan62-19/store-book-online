@@ -2379,10 +2379,11 @@ input, select, textarea {
 			table tbody tr:nth-child(2n + 1) {
 				background-color: rgba(144, 144, 144, 0.075);
 			}
-
+/*
 		table td {
 			padding: 0.75em 0.75em;
 		}
+*/
 
 		table th {
 			font-size: 0.9em;
@@ -3416,7 +3417,7 @@ input, select, textarea {
 @media screen and (max-width: 550px) {
 	.removeFromCart
 	{
-		font-size:3px !important;
+		font-size:4.5px !important;
 	}
 }
 @media screen and (max-width: 700px) {
