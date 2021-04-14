@@ -1059,7 +1059,7 @@ if(url.indexOf('checkout.html')!=-1)
 		}
 		else
 		{
-			$("#korpa").html("<h1>Cart is empty</h1><br><form action='products.html'><button style='margin:0px auto;'>Books</button></form>");
+			$("#korpa").html("<h1>Cart is empty</h1><br><form action='products.html'><button style='margin:0px auto;float:right'>Books</button></form>");
 		}
 	}
 	if(getLocalStorage("cartProducts").length)
