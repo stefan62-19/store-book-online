@@ -185,7 +185,7 @@ $.ajax({
 			{
 				$("#menu #second").append('<li><a href="'+element.href+'" >'+element.naziv+'</a></li>')
 			}
-			if(element.naziv=='Contact Us')
+			if(element.naziv=='Contact Us'||element.naziv=='Author')
 			{
 				$("#menu #first").append('<li><a href="'+element.href+'" >'+element.naziv+'</a></li>')
 			}
