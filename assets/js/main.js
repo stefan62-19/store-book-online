@@ -1195,6 +1195,12 @@ if(url.indexOf('checkout.html')!=-1)
 		var regCity=/^([A-ZŠĐŽĆČ][a-zšđžćč]{2,30})+$/;
 		var regCountry=/^([A-ZŠĐŽĆČ][a-zšđžćč]{3,30})+$/
 		console.log(zip);
+		if(getLocalStorage("cartProducts").length||getLocalStorage("cartProducts")==null)
+		{
+			alert("Your cart is empty");
+		}
+		else
+		{
 		if(title=="1")
 		{
 			greske.push("You must select a title");
@@ -1298,6 +1304,7 @@ if(url.indexOf('checkout.html')!=-1)
 			$("#korpa").html("<h1>Cart is empty</h1><br><form action='products.html'><button style='margin:0px auto;'>Books</button></form>");
 			var niz=[];
 			setLocalStorage('cartProducts',niz);
+		}
 		}
 	})
 
