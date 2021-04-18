@@ -1195,7 +1195,13 @@ if(url.indexOf('checkout.html')!=-1)
 		var regCity=/^([A-ZŠĐŽĆČ][a-zšđžćč]{2,30})+$/;
 		var regCountry=/^([A-ZŠĐŽĆČ][a-zšđžćč]{3,30})+$/
 		console.log(zip);
-		if(getLocalStorage("cartProducts").length||getLocalStorage("cartProducts")==null)
+		if(getLocalStorage("cartProducts")==null)
+		{
+			alert("Your cart is empty");
+		}
+		else
+		{
+			if(getLocalStorage("cartProducts").length==0)
 		{
 			alert("Your cart is empty");
 		}
@@ -1306,6 +1312,8 @@ if(url.indexOf('checkout.html')!=-1)
 			setLocalStorage('cartProducts',niz);
 		}
 		}
+		}
+		
 	})
 
 	$("#selTitle").on("change",function()
