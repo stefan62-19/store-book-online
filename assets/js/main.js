@@ -497,6 +497,9 @@ if(url.indexOf('products.html')!=-1)
 				}
 	})
 	console.log(niz);
+		niz.forEach(element => {
+	$("#ddlLg").append(`<option value="${element}">${element}</option>`)
+});
 	setLocalStorage("language",niz);
 })
 }
@@ -504,9 +507,7 @@ uzimanjeJezika();
 //console.log(languages);
 var languages=getLocalStorage("language");
 console.log(languages);
-languages.forEach(element => {
-	$("#ddlLg").append(`<option value="${element}">${element}</option>`)
-});
+
 	function myFunction() {
 		document.getElementById("myDropdown").classList.toggle("show");
 	  }
