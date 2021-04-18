@@ -1014,6 +1014,8 @@ if(url.indexOf('checkout.html')!=-1)
 	var productsCart=getLocalStorage("cartProducts");
 	var books=getLocalStorage("books")
 	var filtrirani=[];
+	if(getLocalStorage("cartProducts")!=null)
+	{
 	if(getLocalStorage("cartProducts").length)
 	{
 			var ispis=`
@@ -1057,6 +1059,11 @@ if(url.indexOf('checkout.html')!=-1)
 	`
 	$("#cartPrint").html(ispis);
 	$(".removeFromCart").click(removeFromCart);
+	}
+	else
+	{
+		$("#korpa").html("<h1>Cart is empty</h1><br><form action='products.html'><button style='margin:0px auto;'>Books</button></form>");
+	}
 	}
 	else
 	{
