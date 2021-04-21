@@ -928,6 +928,7 @@ var greske="";
 			$("#name").val("");
 			$("#email").val("");
 			$("#subject").val("");
+			$("#message").val("");
 		}
 
 	})
