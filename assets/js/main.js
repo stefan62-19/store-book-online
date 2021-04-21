@@ -177,7 +177,7 @@ $.ajax({
 			{
 				$("#menu #first").append('<li><a href="'+element.href+'" >'+element.naziv+'</a></li>')
 			}
-			if(element.naziv=='Checkout')
+			if(element.naziv=='Cart')
 			{
 				$("#menu #first").append('<li><a href="'+element.href+'" >'+element.naziv+'</a></li><li><a href="#" class="dropdown-toggle">About</a><ul id="second"></ul></li>')
 			}
@@ -375,7 +375,7 @@ if(url.indexOf('product-details.html')!=-1)
 						</form>
 						</div>
 						<div class="col-sm-6">
-						<form action="checkout.html">
+						<form action="cart.html">
 						<button class="primary">Cart</button>
 						</form>
 						</div>
@@ -1009,7 +1009,7 @@ function addToCart()
 }
 //tabela u korpi
 var url=window.location.href;
-if(url.indexOf('checkout.html')!=-1)
+if(url.indexOf('cart.html')!=-1)
 {
 	//console.log(getLocalStorage("cartProducts"));
 	var productsCart=getLocalStorage("cartProducts");
