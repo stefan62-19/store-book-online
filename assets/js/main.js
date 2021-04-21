@@ -254,7 +254,7 @@ ajaxZaSve("assets/data/categories.json","get",function(result)
 	setLocalStorage("cat",result);
 });
 
-console.log(categories);
+//console.log(categories);
 //console.log(zanrovi);
 	var url=window.location.href;
 if(url.indexOf('contact.html')!=-1)
@@ -496,7 +496,7 @@ if(url.indexOf('products.html')!=-1)
 					niz.push(element.language);
 				}
 	})
-	console.log(niz);
+	//console.log(niz);
 		niz.forEach(element => {
 	$("#ddlLg").append(`<option value="${element}">${element}</option>`)
 });
@@ -506,7 +506,7 @@ if(url.indexOf('products.html')!=-1)
 uzimanjeJezika();
 //console.log(languages);
 var languages=getLocalStorage("language");
-console.log(languages);
+//console.log(languages);
 
 	function myFunction() {
 		document.getElementById("myDropdown").classList.toggle("show");
