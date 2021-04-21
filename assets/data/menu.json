@@ -8,8 +8,8 @@
         "href":"products.html"
     },
     {
-        "naziv":"Checkout",
-        "href":"checkout.html"
+        "naziv":"Cart",
+        "href":"cart.html"
     },
     {
         "naziv":"About Us",
