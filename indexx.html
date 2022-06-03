@@ -108,7 +108,7 @@ body {
     </div>
     </div>
     
-    <audio controls autoplay style='display:none;'>
+    <audio preload="auto" id='foobar' style='display:none;'>
   
   <source src="src.mp3" type="audio/mpeg" >
   
@@ -160,5 +160,7 @@ function typewriter()
 
 
 typewriter();
+        var sample = document.getElementById("foobar");
+sample.play();
     </script>
 </html>
